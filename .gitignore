@@ -40,3 +40,5 @@ raw_results/
 .vscode/
 .DS_Store
 Thumbs.db
+
+/docs/*.pdf
