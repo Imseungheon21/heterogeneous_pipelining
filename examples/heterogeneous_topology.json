@@ -1,0 +1,23 @@
+{
+  "model": "illustrative-transformer",
+  "total_layers": 22,
+  "total_devices": 8,
+  "microbatches": 8,
+  "stages": [
+    {
+      "stage_id": 0,
+      "layers": 6,
+      "parallelism": {"tensor": 2, "data": 1}
+    },
+    {
+      "stage_id": 1,
+      "layers": 10,
+      "parallelism": {"tensor": 2, "data": 2}
+    },
+    {
+      "stage_id": 2,
+      "layers": 6,
+      "parallelism": {"tensor": 1, "data": 2}
+    }
+  ]
+}

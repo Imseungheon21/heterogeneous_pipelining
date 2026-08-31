@@ -1,0 +1,34 @@
+{
+  "workload": {
+    "model": "TinyLlama-1.1B",
+    "transformer_layers": 22,
+    "gpus": 8,
+    "gpu_model": null,
+    "pipeline_stages": 2,
+    "gpus_per_stage": 4
+  },
+  "search_space": {
+    "stage_strategies": ["TP1_DP4", "TP2_DP2", "TP4_DP1"],
+    "strategy_pairs": 9,
+    "layer_partitions": 21,
+    "evaluated_configurations": 189
+  },
+  "estimator": {
+    "mean_absolute_prediction_error_percent": 5.85,
+    "error_denominator": "measured net time"
+  },
+  "selected_plan": {
+    "stage_0": {
+      "layer_range": [0, 11],
+      "strategy": "TP1_DP4",
+      "estimated_cost_ms": 593.25
+    },
+    "stage_1": {
+      "layer_range": [11, 22],
+      "strategy": "TP1_DP4",
+      "estimated_cost_ms": 594.60
+    },
+    "estimated_1f1b_latency_ms": 5350.04,
+    "heterogeneous": false
+  }
+}

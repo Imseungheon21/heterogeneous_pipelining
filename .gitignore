@@ -1,0 +1,42 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+dist/
+build/
+
+# Distributed-training outputs
+wandb/
+profile*_logs/
+accumulated_profiling_logs*/
+*.wandb
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+
+# Local experiment inputs are intentionally not published
+raw_results/
+*.local.json
+/mpe_search_results.csv
+/README.pdf
+
+# Local Korean review copies
+/README.ko.md
+/NOTICE.ko.md
+/docs/*.ko.md
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
